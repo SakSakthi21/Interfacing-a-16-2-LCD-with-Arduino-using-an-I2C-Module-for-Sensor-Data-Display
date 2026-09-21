@@ -31,6 +31,11 @@ To interface a **16×2 LCD display with Arduino using an I2C module** and displa
 - LiquidCrystal_I2C library
 - DHT sensor library
 
+### Circuit Diagram  
+<img width="1536" height="1024" alt="ChatGPT Image Sep 8, 2026, 02_46_17 PM" src="https://github.com/user-attachments/assets/b46ab1c7-beaa-4044-a6a6-de27bae174ee" />
+
+
+
 ## Components
 
 ### 16×2 LCD
@@ -38,6 +43,7 @@ To interface a **16×2 LCD display with Arduino using an I2C module** and displa
 ### Circuit Connections
 ### I2C Communication
 ### Working Principle
+
 
 1. The DHT11 sensor measures temperature and humidity.
 2. Arduino reads the sensor values through the digital data pin.
@@ -48,8 +54,25 @@ To interface a **16×2 LCD display with Arduino using an I2C module** and displa
 7. The readings are periodically updated.
 
 ## Arduino Program
+#include <LiquidCrystal.h>
+
+// LCD pins: RS, EN, D4, D5, D6, D7
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+
+void setup() {
+  lcd.begin(16, 2);
+
+  lcd.setCursor(0, 0);
+  lcd.print("EMBEDDED");
+}
+
+void loop() {
+  
+}
 
 ## Observation
+<img width="1600" height="719" alt="image" src="https://github.com/user-attachments/assets/950b687e-0a85-4f1e-8237-11237ee8e459" />
+
 
 ## Result
 
